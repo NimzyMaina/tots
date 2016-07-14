@@ -1,5 +1,5 @@
 # Cuddly Tots
 
-This is Retail Management System
+This is Retail Shop Management System
  
  

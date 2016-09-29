@@ -70,3 +70,19 @@ $route['users/manage'] = 'user';
 $route['users/edit/(:num)'] = 'user/edit/$1';
 $route['users/delete/(:num)'] = 'user/remove/$1';
 $route['confirmation'] = 'authcontroller/confirmation';
+
+//categories
+$route['category/create'] = 'category/create';
+$route['category/manage'] = 'category';
+$route['category/edit/(:num)'] = 'category/edit/$1';
+$route['category/delete/(:num)'] = 'category/remove/$1';
+
+
+//products
+$route['product/create'] = 'product/create';
+$route['product/manage'] = 'product';
+$route['product/edit/(:num)'] = 'product/edit/$1';
+$route['product/delete/(:num)'] = 'product/remove/$1';
+
+//pos
+$route['pos'] = 'pos';

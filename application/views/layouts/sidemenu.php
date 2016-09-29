@@ -37,6 +37,27 @@
                     <li class="<?php echo ($this->uri->segment(2)=='manage')? 'active' : ''; ?>"><a href="<?php echo base_url("users/manage"); ?>"><i class="fa fa-circle-o"></i> Manage Users</a></li>
                 </ul>
             </li>
+            <li class="header">CATEGORY MANAGEMENT</li>
+            <li class="treeview <?php echo active_link('category'); ?>">
+                <a href="#">
+                    <i class="fa fa-sitemap"></i> <span>Categories</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="<?php echo ($this->uri->segment(2)=='create')? 'active' : ''; ?>"><a href="<?php echo base_url("category/create"); ?>"><i class="fa fa-circle-o"></i> Create Category</a></li>
+                    <li class="<?php echo ($this->uri->segment(2)=='manage')? 'active' : ''; ?>"><a href="<?php echo base_url("category/manage"); ?>"><i class="fa fa-circle-o"></i> Manage Categories</a></li>
+                </ul>
+            </li>
+
+            <li class="header">INVENTORY MANAGEMENT</li>
+            <li class="treeview <?php echo active_link('inventory'); ?>">
+                <a href="#">
+                    <i class="fa fa-barcode"></i> <span>Products</span> <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="<?php echo ($this->uri->segment(2)=='create')? 'active' : ''; ?>"><a href="<?php echo base_url("product/create"); ?>"><i class="fa fa-circle-o"></i> Add Product</a></li>
+                    <li class="<?php echo ($this->uri->segment(2)=='manage')? 'active' : ''; ?>"><a href="<?php echo base_url("product/manage"); ?>"><i class="fa fa-circle-o"></i> Manage Products</a></li>
+                </ul>
+            </li>
         </ul>
     </section>
     <!-- /.sidebar -->

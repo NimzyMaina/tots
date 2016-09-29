@@ -18,6 +18,10 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="<?=base_url('public/css/skins/_all-skins.min.css')?>">
 
+    <link href="<?php echo base_url("public/css/sweetAlert2.css"); ?>" rel="stylesheet" type="text/css" />
+
+    <link href="<?php echo base_url('public/plugins/datatables/dataTables.bootstrap.css')?>" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -25,7 +29,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue <?= ($this->uri->segment(1) == 'pos')?'layout-top-nav':'sidebar-mini' ?>">
 <!-- Site wrapper -->
 <div class="wrapper">
 
@@ -33,7 +37,7 @@
         <!-- Logo -->
         <a href="<?=base_url('dashboard')?>" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>A</b>LT</span>
+            <span class="logo-mini"><b>T</b>OTS</span>
             <!-- logo for regular state and mobile devices -->
             <span class="logo-lg"><b>Cuddly</b> Tots</span>
         </a>
@@ -50,6 +54,7 @@
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <!-- User Account: style can be found in dropdown.less -->
+                    <li class="tasks-menu"><a href="<?=base_url('pos')?>"><span class="glyphicon glyphicon-th-large"></span> POS</a></li>
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="<?=base_url("public/img/$profile")?>" class="user-image" alt="User Image">

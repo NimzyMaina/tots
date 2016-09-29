@@ -52,8 +52,8 @@ class MY_Controller extends CI_Controller
         $config['upload_path']          = './assets/uploads/';
         $config['allowed_types']        = 'jpg|png';
         $config['max_size']             = 1000;
-        $config['max_width']            = 1024;
-        $config['max_height']           = 768;
+        //$config['max_width']            = 1024;
+        //$config['max_height']           = 768;
         $config['overwrite']            = true;
 
         $this->load->library('upload', $config);
@@ -93,6 +93,12 @@ class MY_Controller extends CI_Controller
     function display($view,$data = null){
         $this->load->view('layouts/header',$data);
         $this->load->view('layouts/sidemenu');
+        $this->load->view($view);
+        $this->load->view('layouts/footer');
+    }
+
+    function pos($view,$data = null){
+        $this->load->view('layouts/pos_header',$data);
         $this->load->view($view);
         $this->load->view('layouts/footer');
     }
